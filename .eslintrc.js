@@ -53,7 +53,12 @@ module.exports = {
     // React Hooks のための設定
     'react-hooks/rules-of-hooks': 'error',
     // hooksの依存配列の設定
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': [
+      'warn',
+      {
+        additionalHooks: 'useRecoilCallback',
+      },
+    ],
     // <Component {...props}>を許可する
     'react/jsx-props-no-spreading': 'off',
     'react/no-unescaped-entities': 'off',

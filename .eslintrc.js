@@ -8,7 +8,7 @@ module.exports = {
   },
   settings: { react: { version: 'detect' } },
   env: { es2021: true, browser: true, jest: true, node: true },
-  plugins: ['@typescript-eslint', 'import', 'simple-import-sort'],
+  plugins: ['@typescript-eslint', 'import', 'simple-import-sort', 'import-access'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -65,6 +65,7 @@ module.exports = {
     'import/newline-after-import': 'error',
     // default-exportを許容しない
     'import/no-default-export': 'error',
+    'import-access/jsdoc': ['error'],
     // importとexportの順番に関するルール
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
